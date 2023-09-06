@@ -23,11 +23,9 @@ export const CardsItem = () => {
         </div>
         {/* Header */}
         <div>
-            <div>
-                <h3>Buick</h3>
-                <p>Enclave</p>
-                <p>2008</p> 
-            </div>
+            <h3 className='CardsItem__title'>
+                Buick <span>Enclave</span>, 2008
+            </h3>
                 <p>$40</p>
         </div>
 

@@ -6,7 +6,6 @@
     height: 426px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 28px;
     flex-shrink: 0;
     position: relative;
 }
@@ -17,6 +16,26 @@
     flex-shrink: 0;
     border-radius: 14px;
     
+}
+
+.CardsItem__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #121417;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */  
+    margin-top: 14px;
+    margin-bottom: 8px; 
+}
+
+.CardsItem__title span {
+    margin-left: 4px;
+    color: #3470FF;
+
 }
 
 
