@@ -53,3 +53,7 @@ ol {
   list-style: none;
 }
 
+:root {
+  --transition: cubic-bezier(0.01, 0.59, 1, 0.59);
+}
+

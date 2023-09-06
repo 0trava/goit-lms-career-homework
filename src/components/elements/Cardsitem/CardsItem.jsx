@@ -22,16 +22,16 @@ export const CardsItem = () => {
 
         </div>
         {/* Header */}
-        <div>
+        <div className='CardsItem__title-block'>
             <h3 className='CardsItem__title'>
                 Buick <span>Enclave</span>, 2008
             </h3>
-                <p>$40</p>
+            <p>$40</p>
         </div>
 
         {/* Dateils */}
-        <div>
-            <div>Kiev</div>
+        <div className='CardsItem__dateils'>
+            <p>Kiev</p>
             <div>|</div>
             <div>Ukraine</div>
             <div>|</div>
@@ -47,7 +47,11 @@ export const CardsItem = () => {
             <div>|</div>
             <div>Power liftgate</div>            
         </div>
-        <button>Learn more</button>
+        <button className='CardsItem__btn'>
+        <span class="btn-text-one">Learn more</span>
+        <span class="btn-text-two">Great!</span>
+            
+        </button>
     </li>
   )
 }

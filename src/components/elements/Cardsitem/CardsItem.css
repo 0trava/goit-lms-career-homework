@@ -18,7 +18,18 @@
     
 }
 
-.CardsItem__title {
+.CardsItem__title-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+
+
+.CardsItem__title, .CardsItem__title-block p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +49,86 @@
 
 }
 
+.CardsItem__dateils {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    flex-wrap: wrap;
+
+
+    color: rgba(18, 20, 23, 0.50);
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+
+/* Button */
+
+.CardsItem__btn {
+    display: flex;
+    width: 274px;
+    height: 44px;
+    padding: 12px 99px;
+    margin-top: 28px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #3470FF;
+    border: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    color: var(--White, #FFF);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    transition: all 5ms var( --transition);
+
+}
+
+.CardsItem__btn:hover, .CardsItem__btn:focus {
+  background: #0B44CD;
+
+} 
+
+.CardsItem__btn span {
+
+    transition: top 0.5s;
+  }
+
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .CardsItem__btn:hover .btn-text-one {
+    top: -100%;
+
+  }
+  
+  .CardsItem__btn:hover .btn-text-two {
+    top: 50%;
+
+  }
+  
+
 
 
 
@@ -50,9 +141,8 @@
 /* Heart */
 .CardsItem__checkbox {
     position: absolute;
-    top: 0;
-    right: 0;
-
+    top: 14px;
+    right: 14px;
 }
 
 .CardsItem__imgblock-container input {
@@ -73,10 +163,12 @@
   }
   
   .checkmark {
-    top: 0;
-    left: 0;
-    height: 2em;
-    width: 2em;
+    top: 14px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    /* height: 2em;
+    width: 2em; */
     transition: 100ms;
     animation: dislike_effect 400ms ease;
   }
