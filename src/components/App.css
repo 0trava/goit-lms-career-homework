@@ -1,0 +1,5 @@
+.Conatiner {
+    display: flex;
+    justify-content: center;
+    padding: 115px 150px;
+}
