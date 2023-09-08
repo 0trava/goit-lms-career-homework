@@ -4,6 +4,7 @@ import './Catalog.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getCards } from 'redux/cards/selectors';
 import { fetchCards } from 'redux/cards/operetions';
+import { Loader } from 'components/elements/Loader/Loader';
 
 export const Catalog = () => {
   const dispatch = useDispatch() 
@@ -53,7 +54,7 @@ console.log(cardList)
   };
 
   return (
-    <div>
+    <div className='Catalog__container'>
       {/* Header */}
       <div className='Catalog__header'>
             {/* Car Brands  */}
@@ -125,13 +126,17 @@ console.log(cardList)
 
       </div>   
       {/* Catalog */}
-        <ul className='Catalog__list'>
-          {cardList.map((card, index) => {
-            return (
-              <CardsItem key={index} card={card}/>
-            )
-          })}
-        </ul> 
+        {loading ? 
+          <Loader className='Catalog__loader'/>
+         : <ul className='Catalog__list'>
+            {cardList.map((card, index) => {
+              return (
+                <CardsItem key={index} card={card}/>
+              )
+            })}
+           </ul> 
+          }
+        
     </div>
   )
 }

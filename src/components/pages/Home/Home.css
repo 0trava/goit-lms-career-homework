@@ -1,9 +1,10 @@
 .Home__container {
+    margin-top: 20vh;
     display: flex;
     padding-left: 115px;
     padding-right: 115px;
     position: relative;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
 
 
 }

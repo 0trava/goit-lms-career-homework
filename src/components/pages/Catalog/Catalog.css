@@ -1,10 +1,21 @@
 
+.Catalog__container {
+    /* display: flex;
+    justify-content: center; */
+    padding-left: 115px;
+    padding-right: 115px;
+    background-color: #FFFFFF;
+    padding-top: 150px;
+}
+
+
 .Catalog__header {
     display: flex;
     gap: 18px;
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 50px;
+
 }
 
 /* Catalog__input */
@@ -146,5 +157,7 @@
     gap: 30px;
     flex-wrap: wrap;
   }
+
+
 
   

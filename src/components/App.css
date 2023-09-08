@@ -9,14 +9,14 @@
     display: flex;
     width: 100%;
     padding: 20px 115px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
     display: flex;
     justify-content: space-between;
 }
 
 /* LOGO */
 .App_logo {
-    width: 10vw;
+    width: 160px;
 }
 
 .App_logo img {
