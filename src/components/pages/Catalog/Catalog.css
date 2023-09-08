@@ -3,14 +3,12 @@
     display: flex;
     gap: 18px;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     margin-bottom: 50px;
 }
 
 /* Catalog__input */
-.Catalog__input {
 
-}
 
 .Catalog__input div {
     display: flex;
@@ -139,6 +137,14 @@
   .Catalog__btn:hover .btn-text-two {
     top: 50%;
 
+  }
+
+  /* Catalog */
+
+  .Catalog__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
   }
 
   

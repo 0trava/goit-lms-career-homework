@@ -8,13 +8,23 @@
     align-items: flex-start;
     flex-shrink: 0;
     position: relative;
+    margin-bottom: 50px;
+    
+    
 }
+.CardsItem__imgblock {
+  display: flex;
+  width: 274px;
+  height: 354px;
+  overflow: hidden
 
+}
 .CardsItem__imgblock img {
-    width: 274px;
-    height: 268px;
-    flex-shrink: 0;
-    border-radius: 14px;
+   display: block;
+   height: auto;
+
+
+
     
 }
 
@@ -173,12 +183,11 @@
     animation: dislike_effect 400ms ease;
   }
   
-  .CardsItem__imgblock-container input:checked ~ .checkmark path {
+  .CardsItem__imgblock-container  {
     fill: #3470FF;
-    stroke-width: 0;
   }
   
-  .CardsItem__imgblock-container input:checked ~ .checkmark {
+  .CardsItem__imgblock-container  {
     animation: like_effect 400ms ease;
   }
   

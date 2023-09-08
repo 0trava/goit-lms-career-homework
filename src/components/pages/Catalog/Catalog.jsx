@@ -1,16 +1,39 @@
 import { CardsItem } from 'components/elements/Cardsitem/CardsItem'
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import './Catalog.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { getCards } from 'redux/cards/selectors';
+import { fetchCards } from 'redux/cards/operetions';
 
 export const Catalog = () => {
+  const dispatch = useDispatch() 
+
   const [selectedCarBrand, setSelectedCarBrand] = useState('');
   const [selectedCarPrice, setSelectedCarPrice] = useState('');
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');
+  let [loading, setLoading] = useState(false);
+  let cardList = [];
+  
+  
+// GET CARS
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+    setLoading(false);
+    dispatch(fetchCards());
+    }, 1000);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // List of car brands
+
+cardList = useSelector(getCards);
+console.log(cardList)
+
+
+  // INPUT List of car brands
   const carBrands = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'Nissan', 'Hyundai', 'Volkswagen'];
- // List of car price
+ // INPUT List of car price
  const carPrice = ['1000', '2000', '3000', '40000', '500000', '70000'];
  
   const handleInputChange = (event) => {
@@ -95,16 +118,19 @@ export const Catalog = () => {
           </div>
 
           <button type='submite' className='Catalog__btn'>
-          <span class="btn-text-one">Search</span>
-           <span class="btn-text-two">Go!</span>         
+          <span className="btn-text-one">Search</span>
+           <span className="btn-text-two">Go!</span>         
             </button>
 
 
       </div>   
       {/* Catalog */}
         <ul className='Catalog__list'>
-            <CardsItem/>
-
+          {cardList.map((card, index) => {
+            return (
+              <CardsItem key={index} card={card}/>
+            )
+          })}
         </ul> 
     </div>
   )
