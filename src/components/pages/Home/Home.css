@@ -1,0 +1,30 @@
+.Home__container {
+    display: flex;
+    padding-left: 115px;
+    padding-right: 115px;
+    position: relative;
+    padding-bottom: 10vh;
+
+
+}
+
+.Home__title {
+    width: 50%;
+    color: #FFF;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111.9%; /* 200.291px */
+}
+
+.Home__img {
+   width: 50%;
+   position: absolute;
+   top: 0vh;
+   right: 10vw;
+
+}
+
+.Home__img img {
+    width: 60vw;
+}

@@ -1,17 +1,20 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import './Home.css'
+import img from '../../images/hero_img@2x.png'
 
 export const Home = () => {
-    // eslint-disable-next-line
-    const navigate = useNavigate();
+
 
 
   return (
-    <div>
-        <Link className='Home_link' to={"/catalog"}>Catalog</Link>
-        <Link className='Home_link' to={"/favorites"}>Favorites</Link>
-        <div>Home</div>
-      
+    <div className='Home__container'>
+        <h1 className='Home__title'>
+            Car Rental Company
+        </h1>
+        <div className='Home__img'>
+            <img src={img} alt="hero img" />
         </div>
+
+    </div>
   )
 }
