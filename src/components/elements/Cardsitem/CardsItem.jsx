@@ -12,7 +12,7 @@ export const CardsItem = ({card}) => {
 
 
   return (
-    <li className='CardsItem__item'>
+    <li className='CardsItem__item' id={id}>
         {/* Image */}
         <div className='CardsItem__imgblock'>
             <img src={img} alt="CardsItem__image-car" />

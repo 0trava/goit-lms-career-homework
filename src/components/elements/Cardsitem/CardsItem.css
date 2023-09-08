@@ -9,9 +9,17 @@
     flex-shrink: 0;
     position: relative;
     margin-bottom: 50px;
-    
+    transition: all 0.5s;
+
     
 }
+
+.CardsItem__item:hover, .CardsItem__item:focus {
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05);
+
+}
+
 .CardsItem__imgblock {
   display: flex;
   width: 274px;
