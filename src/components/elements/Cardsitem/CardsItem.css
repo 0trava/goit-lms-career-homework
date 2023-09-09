@@ -10,15 +10,19 @@
     position: relative;
     margin-bottom: 50px;
     transition: all 0.5s;
-
-    
+    cursor: pointer;
+   
 }
 
 .CardsItem__item:hover, .CardsItem__item:focus {
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  transform: scale(1.05);
+  scale: 1.05;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 
 }
+
+
+
+
 
 .CardsItem__imgblock {
   display: flex;

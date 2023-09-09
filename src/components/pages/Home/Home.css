@@ -16,6 +16,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 111.9%; /* 200.291px */
+    pointer-events: none;
 }
 
 .Home__img {
@@ -28,4 +29,9 @@
 
 .Home__img img {
     width: 60vw;
+    transition: all 0.5s;
+}
+
+.Home__img img:hover, .Home__img img:focus {
+    scale: 1.05;
 }
