@@ -1,14 +1,18 @@
 import React from 'react';
 // import img from '../../images/img_1_test.jpg';
 import './CardsItem.css';
+import { click } from '@testing-library/user-event/dist/click';
 
-export const CardsItem = ({card}) => {
-    console.log(card);
+export const CardsItem = ({card, openModal}) => {
+
     const {rentalPrice, address, year, make, model, rentalCompany, type, id, functionalities, img} = card;
     const typeText = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();;
     const addressPart = address.split(',').map(part => part.trim());
 
-
+ const clickOpen = (e) => {
+    e.preventDefault();
+    openModal(card);
+ }
 
 
   return (
@@ -55,7 +59,9 @@ export const CardsItem = ({card}) => {
             <div>|</div>
             <div>{functionalities[0]}</div>            
         </div>
-        <button className='CardsItem__btn'>
+
+        {/* Button to Detailed card */}
+        <button className='CardsItem__btn' type='button' onClick={clickOpen}>
         <span className="btn-text-one">Learn more</span>
         <span className="btn-text-two">Great!</span>
             

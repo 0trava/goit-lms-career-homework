@@ -5,16 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCards } from 'redux/cards/selectors';
 import { fetchCards } from 'redux/cards/operetions';
 import { Loader } from 'components/elements/Loader/Loader';
+import { DetailedCard } from './DetailedCard/DetailedCard';
+import { Modal } from 'components/elements/Modal/Modal';
 
 export const Catalog = () => {
   const dispatch = useDispatch() 
+
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
 
   const [selectedCarBrand, setSelectedCarBrand] = useState('');
   const [selectedCarPrice, setSelectedCarPrice] = useState('');
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');
   let [loading, setLoading] = useState(false);
-  let cardList = [];
+  const [cardToOpen, setCardToOpen] = useState([])
+  // let cardList = [];
   
   
 // GET CARS
@@ -27,10 +33,16 @@ export const Catalog = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+const cardList = useSelector(getCards);
 
-cardList = useSelector(getCards);
-console.log(cardList)
-
+  // Modal for DetailedCard
+  const openModal = (card) => {
+    setCardToOpen(card);
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   // INPUT List of car brands
   const carBrands = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'Nissan', 'Hyundai', 'Volkswagen'];
@@ -131,11 +143,18 @@ console.log(cardList)
          : <ul className='Catalog__list'>
             {cardList.map((card, index) => {
               return (
-                <CardsItem key={index} card={card}/>
+                <CardsItem key={index} card={card}  openModal={openModal}/>
               )
             })}
            </ul> 
           }
+
+    {/* Modal Window */}
+    {showModal && (
+        <Modal onClose={toggleModal}>
+          <DetailedCard  closeModal={closeModal} card={cardToOpen}/>
+        </Modal>
+      )}
         
     </div>
   )

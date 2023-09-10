@@ -1,0 +1,182 @@
+.DetailedCard_container {
+    border-radius: 24px;
+    background: #FFF;
+    padding: 40px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+/* Button Close */
+
+.DetailedCard_close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    top: 16px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    transition: all 5ms var( --transition);
+}
+
+.DetailedCard_close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.DetailedCard_close:hover, .DetailedCard_close:focus {
+    scale: 1.05;
+}
+
+
+
+/* img */
+.DetailedCard__img {
+    width: 469px;
+    height: 314px;
+    border-radius: 14px;
+
+}
+
+/* title */
+.DetailedCard__title {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    color: #121417;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+}
+
+.DetailedCard__title span {
+    color: #3470FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* Details */
+
+.DetailedCard__dateils {
+    width: 277px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+
+    color: rgba(18, 20, 23, 0.50);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+
+/* Description */
+
+.DetailedCard__description {
+    max-width: 461px;
+    color: #121417;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+/* Accessories */
+
+.DetailedCard__accessories-title, .DetailedCard__rental-title {
+    margin-top: 24px;
+    margin-bottom: 8px;
+
+    color: #121417;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+/* Rental  */
+
+.DetailedCard__rental-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+
+}
+
+.DetailedCard__rental-list li {
+    display: flex;
+    padding: 7px 14px;
+    border-radius: 35px;
+    background: #F9F9F9;
+    justify-content: center;
+    align-items: center;
+
+    color: #363535;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    letter-spacing: -0.24px;
+}
+
+.DetailedCard__rental-list > li span {
+    padding-left: 4px;
+    color: #3470FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+
+/* Button Rental car*/
+.DetailedCard__btn {
+    display: flex;
+
+    padding: 12px 55px;
+    margin-top: 28px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #3470FF;
+    border: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    color: var(--White, #FFF);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    transition: all 5ms var( --transition);
+
+}
+
+.DetailedCard__btn:hover, .DetailedCard__btn:focus {
+  background: #0B44CD;
+
+} 
+
+
