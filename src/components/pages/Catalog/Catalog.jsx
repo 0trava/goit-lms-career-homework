@@ -1,4 +1,4 @@
-import { CardsItem } from 'components/elements/Cardsitem/CardsItem'
+import { CardsItem } from 'components/pages/Catalog/Cardsitem/CardsItem'
 import React, {useEffect, useState } from 'react'
 import './Catalog.css'
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,12 +13,13 @@ export const Catalog = () => {
 
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
+  let [loading, setLoading] = useState(false);
 
   const [selectedCarBrand, setSelectedCarBrand] = useState('');
   const [selectedCarPrice, setSelectedCarPrice] = useState('');
+  const [priceSelected, setPriceSelected] = useState(''); 
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');
-  let [loading, setLoading] = useState(false);
   const [cardToOpen, setCardToOpen] = useState([])
   // let cardList = [];
   
@@ -33,7 +34,9 @@ export const Catalog = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
 const cardList = useSelector(getCards);
+
 
   // Modal for DetailedCard
   const openModal = (card) => {
@@ -45,17 +48,25 @@ const cardList = useSelector(getCards);
   };
 
   // INPUT List of car brands
-  const carBrands = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'Nissan', 'Hyundai', 'Volkswagen'];
- // INPUT List of car price
- const carPrice = ['1000', '2000', '3000', '40000', '500000', '70000'];
- 
+  const carBrands = [...new Set(cardList.map(car => car.make))];
+
   const handleInputChange = (event) => {
     setSelectedCarBrand(event.target.value);
   };
 
+
+
+
+
+ // INPUT List of car price
+ const carPrice = [...new Set(cardList.map(car => car.rentalPrice.replace(/\$/g, '')))];
+ 
   const handleInputChangePrice = (event) => {
-    setSelectedCarPrice(event.target.value);
+    setPriceSelected(event.target.value);
+    setSelectedCarPrice(`To ${event.target.value} $`);
   };
+
+
 
   const handleMileageFromChange = (event) => {
     setMileageFrom(event.target.value);

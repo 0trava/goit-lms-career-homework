@@ -1,5 +1,6 @@
 .DetailedCard_container {
     border-radius: 24px;
+    width: 541px;
     background: #FFF;
     padding: 40px;
     position: relative;
@@ -105,7 +106,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 142.857% */
+    
 }
+
+.CardsItem__dateils {
+    max-width: 460px;
+}
+
 
 /* Rental  */
 

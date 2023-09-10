@@ -22,11 +22,18 @@ export const DetailedCard = ({closeModal, card}) => {
     const typeText = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();;
     const addressPart = address.split(',').map(part => part.trim());
 
+
+    // Click close window
+    const closeWindow = () => {
+        engineSize.preventDefault();
+        closeModal();
+    }
+
   return (
 
         <div onClick={closeModal}  className='DetailedCard_container'>
             {/* Close button */}
-                <button type='button' className='DetailedCard_close'>
+                <button type='button' className='DetailedCard_close' onClick={closeWindow}>
                     <AiOutlineClose/>
                 </button>
             {/* Image */}
@@ -61,17 +68,14 @@ export const DetailedCard = ({closeModal, card}) => {
             
             {/* Accessories and functionalities: */}
             <h3 className='DetailedCard__accessories-title'>Accessories and functionalities:</h3>
-            <div className='CardsItem__dateils'>
+            <ul className='CardsItem__dateils'>
                 { accessories.map((item, index) => {
                     return (
-                        <>
-                        <p>{item}</p>
-                        <div>|</div>
-                        </>  
+                        <li key={index}>{item} <span className='span'>|</span></li>
                     )
                 })}
         
-            </div>
+            </ul>
 
             {/* Rental Conditions:  */}
             <h3  className='DetailedCard__rental-title'>Rental Conditions:</h3>

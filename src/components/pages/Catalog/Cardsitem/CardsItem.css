@@ -169,16 +169,20 @@
 }
 
 .CardsItem__imgblock-container input {
-    position: absolute;
-    /* opacity: 0; */
+    position: relative;
+    opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    height: 18px;
+    width: 18px;
   }
+
+  /* input:checked rect {
+    fill: #3470FF;
+  } */
   
   .CardsItem__imgblock-container {
     display: block;
-    position: relative;
+    /* position: relative; */
     cursor: pointer;
     font-size: 20px;
     user-select: none;
@@ -186,26 +190,27 @@
   }
   
   .checkmark {
-    top: 14px;
-    left: 14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 18px;
     height: 18px;
-    /* height: 2em;
-    width: 2em; */
+
     transition: 100ms;
     animation: dislike_effect 400ms ease;
+    fill: none;
+    
   }
+
   
-  .CardsItem__imgblock-container  {
-    fill: #3470FF;
-  }
+
   
   .CardsItem__imgblock-container  {
     animation: like_effect 400ms ease;
   }
   
   .CardsItem__imgblock-container:hover {
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
   }
   
   @keyframes like_effect {
