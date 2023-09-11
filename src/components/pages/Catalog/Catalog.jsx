@@ -176,22 +176,25 @@ const getnextPage = (e) => {
       {/* Catalog */}
         {loading ? 
           <Loader className='Catalog__loader'/>
-         : <ul className='Catalog__list'>
+         : 
+         <><ul className='Catalog__list'>
             {cardList.map((card, index) => {
               return (
                 <CardsItem key={index} card={card}  openModal={openModal} setFavorite={setFavorite}/>
               )
             })}
            </ul> 
+                 {/* Button  Load more*/}
+            <button 
+            type='button' 
+            className={isButtonVisible}
+            onClick={getnextPage}
+            >
+              Load more
+          </button>
+          </>
           }
-      {/* Button  Load more*/}
-      <button 
-        type='button' 
-        className={isButtonVisible}
-        onClick={getnextPage}
-        >
-          Load more
-      </button>
+
 
     {/* Modal Window */}
     {showModal && (

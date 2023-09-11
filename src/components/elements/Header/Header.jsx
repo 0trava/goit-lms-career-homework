@@ -6,8 +6,10 @@ export const Header = () => {
     const location = useLocation();
 
     const checkActivePage = (link) => {
-        const page = location.pathname;
-        console.log(page);
+        let page = location.pathname;
+        if (page === "/react-homework-template") {
+            page = "/home"
+        }
         if (page === link) {
             return 'Header_link-active';
         } else {

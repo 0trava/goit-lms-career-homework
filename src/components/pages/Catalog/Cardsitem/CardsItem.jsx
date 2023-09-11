@@ -14,12 +14,15 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
     // Chack favorite list
     const checkedfavorite = () => {
         const savedFavorites = JSON.parse(localStorage.getItem('favoriteCars'));
-        if (savedFavorites.includes(id)) {
+        if (savedFavorites) {
+          if (savedFavorites.includes(id)) {
             return true;
           } else {
             return false;
           }
-      return false;  
+        }
+        return false;
+        
     }
 
     let checkfavorite = checkedfavorite();

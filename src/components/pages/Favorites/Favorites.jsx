@@ -1,7 +1,7 @@
 import { CardsItem } from 'components/pages/Catalog/Cardsitem/CardsItem'
 import React, {useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { favoriteCards } from 'redux/cards/selectors';
+import { getAllCards } from 'redux/cards/selectors';
 import { fetchCards } from 'redux/cards/operetions';
 import { Loader } from 'components/elements/Loader/Loader';
 
@@ -38,7 +38,17 @@ export const Favorites = () => {
   }, [favorites]);
 
 
-  let cardList = useSelector(favoriteCards);
+
+  // Filter favorite list
+     
+  let savedFavorites = JSON.parse(localStorage.getItem('favoriteCars'));
+  const list = useSelector(getAllCards);
+  if (!savedFavorites) {savedFavorites=[]}
+  let cardList = list.filter((card) => savedFavorites.includes(card.id));
+
+
+
+
 
   const setFavorite = (id) => {
     setFavorites("id");
