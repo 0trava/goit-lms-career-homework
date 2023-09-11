@@ -21,8 +21,8 @@ export const DetailedCard = ({closeModal, card}) => {
 
 
     // Click close window
-    const closeWindow = () => {
-        engineSize.preventDefault();
+    const closeWindow = (e) => {
+        e.preventDefault();
         closeModal();
     }
 
@@ -65,7 +65,7 @@ export const DetailedCard = ({closeModal, card}) => {
             
             {/* Accessories and functionalities: */}
             <h3 className='DetailedCard__accessories-title'>Accessories and functionalities:</h3>
-            <ul className='CardsItem__dateils'>
+            <ul className='DetailedCard__accessories-list'>
                 { accessories.map((item, index) => {
                     return (
                         <li key={index}>{item} <span className='span'>|</span></li>
@@ -86,7 +86,7 @@ export const DetailedCard = ({closeModal, card}) => {
 
 
             {/* Button */}
-            <button className='DetailedCard__btn'>Rental car</button>
+            <a  href="tel:+380730000000" className='DetailedCard__btn'>Rental car</a>
 
         </div>
 

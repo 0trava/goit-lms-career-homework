@@ -109,8 +109,17 @@
     
 }
 
-.CardsItem__dateils {
+.DetailedCard__accessories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     max-width: 460px;
+    color: rgba(18, 20, 23, 0.50);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
 }
 
 
@@ -158,8 +167,11 @@
 /* Button Rental car*/
 .DetailedCard__btn {
     display: flex;
-
-    padding: 12px 55px;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 168px;
+    /* padding: 12px 55px; */
     margin-top: 28px;
     justify-content: center;
     align-items: center;
