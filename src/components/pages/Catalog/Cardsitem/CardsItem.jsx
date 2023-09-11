@@ -19,7 +19,7 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
           } else {
             return false;
           }
-        
+      return false;  
     }
 
     let checkfavorite = checkedfavorite();
