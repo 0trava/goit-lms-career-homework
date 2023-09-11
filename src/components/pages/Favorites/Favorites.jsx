@@ -1,7 +1,7 @@
 import { CardsItem } from 'components/pages/Catalog/Cardsitem/CardsItem'
 import React, {useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { favoriteCards, getCards } from 'redux/cards/selectors';
+import { favoriteCards } from 'redux/cards/selectors';
 import { fetchCards } from 'redux/cards/operetions';
 import { Loader } from 'components/elements/Loader/Loader';
 
@@ -14,7 +14,6 @@ export const Favorites = () => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
   let [loading, setLoading] = useState(false);
-  const savedFavorites = JSON.parse(localStorage.getItem('favoriteCars'));
 
 
   const [cardToOpen, setCardToOpen] = useState([]);

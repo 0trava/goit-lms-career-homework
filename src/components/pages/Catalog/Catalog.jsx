@@ -17,6 +17,7 @@ export const Catalog = () => {
 
   const [selectedCarBrand, setSelectedCarBrand] = useState('');
   const [selectedCarPrice, setSelectedCarPrice] = useState('');
+  // eslint-disable-next-line
   const [priceSelected, setPriceSelected] = useState(''); 
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');

@@ -9,17 +9,14 @@ export const DetailedCard = ({closeModal, card}) => {
             year, 
             make, 
             model, 
-            rentalCompany, 
             type, 
             id, 
-            functionalities, 
             img,
             description,
             fuelConsumption,
             engineSize,
             accessories,
             } = card;
-    const typeText = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();;
     const addressPart = address.split(',').map(part => part.trim());
 
 

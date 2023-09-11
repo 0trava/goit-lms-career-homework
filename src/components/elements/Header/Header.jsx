@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, useLocation } from "react-router-dom";
 import './Header.css'
 
 export const Header = () => {
     const location = useLocation();
-    const [pageActive, setPageActive] = useState('Header_link');
 
     const checkActivePage = (link) => {
         const page = location.pathname;
@@ -20,7 +19,7 @@ export const Header = () => {
   return (
     <div className="Header__container">
     <Link  className='Header_logo' to={"/home"}>
-      <img src="https://cdn.rcstatic.com/images/site_graphics/newsite/mobile/logos/rc-logo-small--white.svg" width={"40px"}/>
+      <img src="https://cdn.rcstatic.com/images/site_graphics/newsite/mobile/logos/rc-logo-small--white.svg" width={"40px"} alt="logo"/>
     </Link>
     
     <div className='Header__header'>
