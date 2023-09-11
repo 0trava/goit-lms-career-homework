@@ -41,7 +41,6 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
 //  Change favorite list (Add/Delete)
  const toggleFavorite = () => {
     const savedFavorites = JSON.parse(localStorage.getItem('favoriteCars'));
-    console.log(savedFavorites);
         if (savedFavorites) {
             list = savedFavorites;
         }

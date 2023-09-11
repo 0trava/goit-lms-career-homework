@@ -9,6 +9,7 @@
     padding-top: 150px;
     display: flex;
     justify-content: center;
+    /* justify-content: flex-start; */
     flex-direction: column;
     align-items: center;
 
@@ -160,10 +161,11 @@
 
   .Catalog__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
     flex-wrap: wrap;
     max-width: calc(1440px - 230px);
+
   }
 
   /* Button  Load more */

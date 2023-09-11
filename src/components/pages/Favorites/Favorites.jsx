@@ -4,9 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllCards } from 'redux/cards/selectors';
 import { fetchCards } from 'redux/cards/operetions';
 import { Loader } from 'components/elements/Loader/Loader';
+import './Favorites.css';
 
 import { Modal } from 'components/elements/Modal/Modal';
 import { DetailedCard } from '../Catalog/DetailedCard/DetailedCard';
+import img_empty from '../../images/empty_list.jpg'
 
 export const Favorites = () => {
   const dispatch = useDispatch();
@@ -62,19 +64,34 @@ export const Favorites = () => {
     setShowModal(false);
   };
 
+
   return (
-    <div className='Catalog__container'>
-      {/* Catalog */}
-      {loading ? 
+    <div className='Favorites__container'>
+      { (savedFavorites.length > 0) ? 
+      <>
+        {/* Catalog */}
+        {loading ? 
           <Loader className='Catalog__loader'/>
-         : <ul className='Catalog__list'>
+        : <ul className='Catalog__list'>
             {cardList.map((card, index) => {
               return (
                 <CardsItem key={index} card={card}  openModal={openModal} setFavorite={setFavorite}/>
               )
             })}
-           </ul> 
+          </ul> 
           }
+        </>
+      :
+        <div className='Favorites__empty'>
+          <img src={img_empty} alt="empty list" />
+        </div>
+      }
+
+
+
+      
+
+      
 
     {/* Modal Window */}
     {showModal && (

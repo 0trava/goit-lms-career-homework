@@ -1,0 +1,28 @@
+.Favorites__container {
+    display: flex;
+    position: relative;
+
+    padding-left: 115px;
+    padding-right: 115px;
+    padding-bottom: 150px;
+    background-color: #FFFFFF;
+    padding-top: 150px;
+    display: flex;
+
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start
+
+}
+
+.Favorites__empty {
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+    
+}
+
+.Favorites__empty img {
+    width: 50vw;
+    height: auto;
+}
