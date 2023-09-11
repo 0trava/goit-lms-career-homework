@@ -5,36 +5,3 @@
     background: #3470FF;
 }
 
-.App__header-container {
-    display: flex;
-    width: 100%;
-    padding: 20px 115px;
-    /* margin-bottom: 150px; */
-    display: flex;
-    justify-content: space-between;
-}
-
-/* LOGO */
-.App_logo {
-    width: 160px;
-}
-
-.App_logo img {
-    width: 100%;
-    color: aquamarine;
-    fill: chartreuse;
-}
-
-.App__header {
-    display: flex;
-    gap: 30px;
-}
-
-.App_link {
-    color: white;
-    font-family: 'Manrope';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-
-}

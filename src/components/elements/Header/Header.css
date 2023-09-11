@@ -1,0 +1,57 @@
+.Header__container {
+    display: flex;
+    width: 100%;
+    padding: 20px 115px;
+    /* margin-bottom: 150px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.Header_logo {
+    width: 160px;
+    transition: all 5ms var( --transition);
+    cursor: pointer;
+}
+
+.Header_logo:hover, .Header_logo:focus {
+    scale: 1.05;
+}
+
+
+
+.Header_logo img {
+    width: 100%;
+    color: aquamarine;
+    fill: chartreuse;
+}
+
+.Header__header {
+    display: flex;
+    gap: 30px;
+}
+
+.Header_link {
+    color: white;
+    font-family: 'Manrope';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 5ms var( --transition);
+    cursor: pointer;
+}
+
+.Header_link-active {
+    color: white;
+    font-family: 'Manrope';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 5ms var( --transition);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.Header_link:hover, .Header_link:focus {
+    scale: 1.05;
+}

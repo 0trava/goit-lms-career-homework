@@ -5,12 +5,14 @@
     width: 274px;
     height: 426px;
     flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    position: relative;
     margin-bottom: 50px;
-    transition: all 0.5s;
+    position: relative;
     cursor: pointer;
+    transition: all 0.5s;
+    /* align-items: flex-start;
+    flex-shrink: 0;
+    
+     */
    
 }
 
@@ -27,18 +29,18 @@
 .CardsItem__imgblock {
   display: flex;
   width: 274px;
-  height: 354px;
+  height: 260px;
+  background-color: #3470FF;
+  /* height: 354px; */
   overflow: hidden;
   border-radius: 14px;
-
 }
+
 .CardsItem__imgblock img {
-   display: block;
+   /* display: block; */
+   width: 274px;
    height: auto;
 
-
-
-    
 }
 
 .CardsItem__title-block {
@@ -74,6 +76,8 @@
 
 .CardsItem__dateils {
     display: flex;
+    align-content: flex-start;
+    height: 82px;
     gap: 6px;
     width: 100%;
     flex-wrap: wrap;
@@ -94,7 +98,7 @@
     width: 274px;
     height: 44px;
     padding: 12px 99px;
-    margin-top: 28px;
+    /* margin-top: 28px; */
     justify-content: center;
     align-items: center;
     flex-shrink: 0;

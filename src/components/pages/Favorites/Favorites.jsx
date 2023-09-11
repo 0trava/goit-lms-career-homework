@@ -20,6 +20,9 @@ export const Favorites = () => {
   const [cardToOpen, setCardToOpen] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
+
+
+
   // GET CARS
   useEffect(() => {
     setLoading(true);
@@ -30,20 +33,18 @@ export const Favorites = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-    let allList = useSelector(getCards);
+  useEffect(() => {
 
-    // Rerender change favorite
-    const setFavorite = (e) => {
-      const cardList = allList.filter((card) => savedFavorites.includes(card.id));
-      setFavorites(cardList);
-    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [favorites]);
 
 
+  let cardList = useSelector(favoriteCards);
 
+  const setFavorite = (id) => {
+    setFavorites("id");
+  }
 
-    useEffect(() => {
-      setFavorite()
-    }, [favorites]);
   
 
    // Modal for DetailedCard
@@ -61,9 +62,9 @@ export const Favorites = () => {
       {loading ? 
           <Loader className='Catalog__loader'/>
          : <ul className='Catalog__list'>
-            {favorites.map((card, index) => {
+            {cardList.map((card, index) => {
               return (
-                <CardsItem key={index} card={card}  openModal={openModal} setFavorites={setFavorite}/>
+                <CardsItem key={index} card={card}  openModal={openModal} setFavorite={setFavorite}/>
               )
             })}
            </ul> 

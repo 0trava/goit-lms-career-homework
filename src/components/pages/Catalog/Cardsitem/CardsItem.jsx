@@ -49,13 +49,14 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
       let newList = list.filter((favId) => favId !== id)
       localStorage.setItem('favoriteCars', JSON.stringify(newList));
       setFavorites(newList);
-      setFavorite(newList);
+      setFavorite(id);
 
     } else {
       // Add the id to favorites
       localStorage.setItem('favoriteCars', JSON.stringify([...list, id]));
       setFavorites([...list, id]);
-      setFavorite([...list, id]);
+      setFavorite(id);
+
 
     }
   };
@@ -109,7 +110,7 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
             <div>|</div>
             <div>{rentalCompany}</div>
             <div>|</div>
-            <div>Premium???</div>
+            <div>Premium </div>
             <div>|</div>
             <div>{typeText}</div>
             <div>|</div>
