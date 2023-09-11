@@ -45,10 +45,7 @@ export const Favorites = () => {
   const list = useSelector(getAllCards);
   if (!savedFavorites) {savedFavorites=[]}
   let cardList = list.filter((card) => savedFavorites.includes(card.id));
-
-
-
-
+  
 
   const setFavorite = (id) => {
     setFavorites("id");
