@@ -7,22 +7,10 @@
     flex-direction: column;
     margin-bottom: 50px;
     position: relative;
-    cursor: pointer;
+
     transition: all 0.5s;
-    /* align-items: flex-start;
-    flex-shrink: 0;
-    
-     */
    
 }
-
-.CardsItem__item:hover, .CardsItem__item:focus {
-  scale: 1.05;
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
-
-}
-
-
 
 
 
@@ -34,12 +22,14 @@
   /* height: 354px; */
   overflow: hidden;
   border-radius: 14px;
+  justify-content: center;
 }
 
 .CardsItem__imgblock img {
    /* display: block; */
-   width: 274px;
+   /* width: 120%; */
    height: auto;
+   pointer-events: none;
 
 }
 

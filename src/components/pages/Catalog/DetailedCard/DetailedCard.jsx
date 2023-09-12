@@ -45,19 +45,18 @@ export const DetailedCard = ({closeModal, card}) => {
 
             {/* Dateils */}
             <div className='DetailedCard__dateils'>
-                <p>{addressPart[1]}</p>
-                <div>|</div>
-                <p>{addressPart[2]}</p>
-                <div>|</div>
-                <p>id: {id}</p>
-                <div>|</div>
-                <p>year: {year}</p>
-                <div>|</div>
-                <p>Type: {type}</p>
-                <div>|</div>
-                <p>Fuel Consumption: {fuelConsumption}</p>
-                <div>|</div>           
-                <p>Engine Size: {engineSize}</p>          
+                <ul>
+                    <li>{addressPart[1]} <span>|</span></li>
+                    <li>{addressPart[2]} <span>|</span></li>
+                    <li>id: {id} <span>|</span></li>
+                    <li>year: {year}<span>|</span></li>
+                    <li>Type: {type}</li>
+                </ul>
+                <ul>
+                    <li>Fuel Consumption: {fuelConsumption} <span>|</span></li>          
+                    <li>Engine Size: {engineSize}</li> 
+                </ul>
+         
             </div>
             
             {/* Description */}
@@ -77,11 +76,15 @@ export const DetailedCard = ({closeModal, card}) => {
             {/* Rental Conditions:  */}
             <h3  className='DetailedCard__rental-title'>Rental Conditions:</h3>
             <ul className='DetailedCard__rental-list'>
+                <div className='DetailedCard__rental-list'>
                 <li>Minimum age : <span>25</span></li>
                 <li>Valid driver’s license</li>
+                </div>
+                <div className='DetailedCard__rental-list'>
                 <li>Security deposite required </li>
                 <li>Mileage: <span>5,858</span></li>
                 <li>Price: <span>{rentalPrice}</span></li>
+                </div>
             </ul>
 
 

@@ -21,6 +21,7 @@
     padding: 0;
     margin: 0;
     transition: all 5ms var( --transition);
+    cursor: pointer;
 }
 
 .DetailedCard_close svg {
@@ -67,7 +68,6 @@
 /* Details */
 
 .DetailedCard__dateils {
-    width: 277px;
     display: flex;
     justify-content: flex-start;
     gap: 4px;
@@ -80,6 +80,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px; /* 150% */
+}
+
+.DetailedCard__dateils ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.DetailedCard__dateils > ul span {
+    color: rgba(18, 20, 23, 0.50);
 }
 
 /* Description */
@@ -112,6 +122,7 @@
 .DetailedCard__accessories-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 8px;
     max-width: 460px;
     color: rgba(18, 20, 23, 0.50);
@@ -122,16 +133,19 @@
     line-height: 18px; /* 150% */
 }
 
+.DetailedCard__accessories-list  li:last-child .span {
+  display: none;
+}
+
 
 /* Rental  */
 
-.DetailedCard__rental-list {
+.DetailedCard__rental-list div {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     margin: 0;
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 
 }
 

@@ -125,9 +125,7 @@ export const CardsItem = ({card, openModal, setFavorite}) => {
 
         {/* Button to Detailed card */}
         <button className='CardsItem__btn' type='button' onClick={clickOpen}>
-        <span className="btn-text-one">Learn more</span>
-        <span className="btn-text-two">Great!</span>
-            
+            Learn more
         </button>
     </li>
   )
