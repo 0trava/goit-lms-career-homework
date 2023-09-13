@@ -1,0 +1,190 @@
+.Filter__header {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 50px;
+
+}
+
+/* Catalog__input */
+
+
+.Filter__input div {
+    display: flex;
+    width: calc(160px * 2);
+}
+
+.Filter__input label {
+    color: #8A8A89;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    margin-bottom: 8px;
+
+  }
+
+  .Filter__input .Filter__select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 224px;
+    outline: none;
+    border: none;
+
+    padding: 14px 89px 14px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 14px;
+    background: #F7F7FB;
+
+
+
+  }
+
+  .Filter__select option {
+    display: inline-flex;
+    height: 272px;
+    padding: 14px 8px 14px 18px;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    color: rgba(18, 20, 23, 0.20);
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+
+    background: #FFF;
+    border: 1px solid rgba(18, 20, 23, 0.05);
+    border-radius: 14px;
+
+    /* 
+    
+    
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+    background-color: #0B44CD;
+
+
+ */
+  }
+
+  .Filter__input .Filter__input-mileage-left {
+    display: flex;
+    width: 160px;
+    height: 48px;
+    /* padding: 14px 93px 14px 24px; */
+    align-items: center;
+
+    border-radius: 14px 0px 0px 14px;
+    border-right: 1px solid rgba(138, 138, 137, 0.20);
+    background: #F7F7FB;
+  }
+
+  .Filter__input .Filter__input-mileage-right {
+    display: flex;
+    width: 160px;
+    height: 48px;
+    /* padding: 14px 93px 14px 24px; */
+    align-items: center;
+    background-color: #0B44CD;
+
+    border-radius: 0px 14px 14px 0px;
+    background: #F7F7FB;
+  }
+
+/* Label */
+.Filter__input input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+form label {
+    display: block;
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+
+/* input list {
+    display: inline-flex;
+    height: 272px;
+    padding: 14px 8px 14px 18px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 112px;
+    border-radius: 14px;
+    border: 1px solid rgba(18, 20, 23, 0.05);
+    background: #FFF;
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+} */
+
+
+
+
+
+/* Button */
+
+.Filter__btn {
+    display: flex;
+    width: 136px;
+    height: 48px;
+    padding: 14px 44px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #3470FF;
+    border: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 5ms var( --transition);
+
+    color: var(--White, #FFF);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+
+}
+
+.Filter__btn span {
+
+    transition: top 0.5s;
+  }
+
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .Filter__btn:hover, .Filter__btn:focus {
+    background: #0B44CD;
+
+  }  
+
+  .Filter__btn:hover .btn-text-one {
+    top: -100%;
+
+  }
+  
+  .Filter__btn:hover .btn-text-two {
+    top: 50%;
+
+  }
