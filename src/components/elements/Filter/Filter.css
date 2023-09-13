@@ -1,14 +1,56 @@
+
 .Filter__header {
     display: flex;
     gap: 18px;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 50px;
+    flex-direction: column;
+}  
 
+ .Filter__block {
+        gap: 18px;
+}
+@media (min-width: 600px) {
+    .Filter__header {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    } 
+
+    .Filter__block {
+        display: flex;
+    }
 }
 
-/* Catalog__input */
+@media (min-width: 1200px) {
+    .Filter__header {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 50px;
+        flex-direction: row;
+    } 
+}
 
+
+
+/* Catalog__input */
+.Filter__input {
+    position: relative;
+}
+
+.Filter__input svg {
+    position: absolute;
+    right: 5px;
+    top: 48px;
+    background-color:  #F7F7FB;
+    pointer-events: none;
+
+}
 
 .Filter__input div {
     display: flex;
@@ -26,22 +68,39 @@
 
   }
 
-  .Filter__input .Filter__select {
+  .Filter__select-brands {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 224px;
+    height: 48px;
     outline: none;
     border: none;
 
-    padding: 14px 89px 14px 18px;
+
+    padding: 16px 89px 16px 20px;
     justify-content: center;
     align-items: center;
     gap: 32px;
     border-radius: 14px;
     background: #F7F7FB;
+  }
 
+  .Filter__input .Filter__select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 224px;
+    height: 48px;
+    outline: none;
+    border: none;
 
+    padding: 16px 89px 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 14px;
+    background: #F7F7FB;
 
   }
 
@@ -62,39 +121,92 @@
     background: #FFF;
     border: 1px solid rgba(18, 20, 23, 0.05);
     border-radius: 14px;
-
-    /* 
-    
-    
-    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
-    background-color: #0B44CD;
-
-
- */
   }
+
+  .Filter__carPriceInput-before {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #121417;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+
+  }
+
+  .Filter__carPriceInput-after {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    color: #121417;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
 
   .Filter__input .Filter__input-mileage-left {
     display: flex;
     width: 160px;
     height: 48px;
+    outline: none;
+    border: none;
     /* padding: 14px 93px 14px 24px; */
     align-items: center;
+    padding-left: 60px;
+    position: relative;
 
     border-radius: 14px 0px 0px 14px;
     border-right: 1px solid rgba(138, 138, 137, 0.20);
     background: #F7F7FB;
   }
 
+  .Filter__span-mileage-left {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #121417;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+
+
   .Filter__input .Filter__input-mileage-right {
     display: flex;
     width: 160px;
     height: 48px;
+    outline: none;
+    border: none;
+    padding-left: 35px;
     /* padding: 14px 93px 14px 24px; */
     align-items: center;
     background-color: #0B44CD;
+    position: relative;
 
     border-radius: 0px 14px 14px 0px;
     background: #F7F7FB;
+  }
+
+
+  .Filter__span-mileage-right {
+    position: absolute;
+    top: 50px;
+    left: 170px;
+    color: #121417;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+
   }
 
 /* Label */

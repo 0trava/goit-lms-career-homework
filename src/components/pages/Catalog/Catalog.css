@@ -1,7 +1,37 @@
 
 .Catalog__container {
-    /* display: flex;
-    justify-content: center; */
+
+    padding-left: 15px;
+    padding-right:15px;
+    padding-bottom: 50px;
+    background-color: #FFFFFF;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (min-width: 480px) {
+  .Catalog__container {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 150px;
+    background-color: #FFFFFF;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+}
+
+@media (min-width: 1200px) {
+  .Catalog__container {
+
     padding-left: 115px;
     padding-right: 115px;
     padding-bottom: 150px;
@@ -9,20 +39,21 @@
     padding-top: 150px;
     display: flex;
     justify-content: center;
-    /* justify-content: flex-start; */
     flex-direction: column;
     align-items: center;
 
+}
 }
 
   /* Catalog */
 
   .Catalog__list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     max-width: calc(1440px - 230px);
+    
 
   }
 
