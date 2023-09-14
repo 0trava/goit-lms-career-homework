@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/goit-lms-career-homework/static/css/main.48908f8e.css",
-    "main.js": "/goit-lms-career-homework/static/js/main.994d4b21.js",
+    "main.css": "/goit-lms-career-homework/static/css/main.fd1cd492.css",
+    "main.js": "/goit-lms-career-homework/static/js/main.6643d7cb.js",
     "static/media/hero_img@2x.png": "/goit-lms-career-homework/static/media/hero_img@2x.c428849c4594716715d6.png",
     "static/media/empty_list.jpg": "/goit-lms-career-homework/static/media/empty_list.f355b648e454aa3123bd.jpg",
     "index.html": "/goit-lms-career-homework/index.html",
-    "main.48908f8e.css.map": "/goit-lms-career-homework/static/css/main.48908f8e.css.map",
-    "main.994d4b21.js.map": "/goit-lms-career-homework/static/js/main.994d4b21.js.map"
+    "main.fd1cd492.css.map": "/goit-lms-career-homework/static/css/main.fd1cd492.css.map",
+    "main.6643d7cb.js.map": "/goit-lms-career-homework/static/js/main.6643d7cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.48908f8e.css",
-    "static/js/main.994d4b21.js"
+    "static/css/main.fd1cd492.css",
+    "static/js/main.6643d7cb.js"
   ]
 }
