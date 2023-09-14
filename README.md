@@ -1,3 +1,30 @@
+<h1>RENTAL CARS</h1>
+
+The car rental website was made in React with adaptive layout. Home page, catalogue, other. Performed as practical work in GoIT courses - a test task, consolidation of knowledge.
+
+<p>Link to the design layout   - <a href="https://www.figma.com/file/XhC8FSCfAkraEF5l7Hx4fL/Test?type=design&node-id=0-1&mode=design&t=Ed3b0heFOmE2LSXU-0">here</a></p>
+
+
+![image](https://github.com/0trava/goit-lms-career-homework/assets/102797527/c8e4568f-cfd5-445a-90ce-ff426035cf44)
+
+![image](https://github.com/0trava/goit-lms-career-homework/assets/102797527/ded864d5-8628-49e3-8c2f-f8989dd40ad0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Тестове завдання
 Створити застосунок для компанії, що надає послуги надання в Україні автомобілів в оренду. Застосунок складається з 3х сторінок:
 
