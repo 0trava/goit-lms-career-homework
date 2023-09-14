@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { AppRoutes } from "../routes/Routes";
 import './App.css';
 import { Header } from "./elements/Header/Header";
-import { fetchAllCards, fetchCards } from "redux/cards/operetions";
+import { fetchAllCards} from "redux/cards/operetions";
 import { useDispatch } from "react-redux";
 
 
