@@ -1,26 +1,12 @@
 import React, { useState } from 'react';
 import './Filter.css';
 
-export const Filter = ({carPrice, carBrands}) => {
-    const [selectedCarBrand, setSelectedCarBrand] = useState('');
-    const [selectedCarPrice, setSelectedCarPrice] = useState('');
-    // eslint-disable-next-line
-    const [priceSelected, setPriceSelected] = useState(''); 
+export const Filter = ({carPrice, carBrands, filterCards}) => {
     const [mileageFrom, setMileageFrom] = useState('');
     const [mileageTo, setMileageTo] = useState('');
 
 // --------------------------------------------------------------------
-    const handleInputChange = (event) => {
-        setSelectedCarBrand(event.target.value);
-      };
 
-    const handleInputChangePrice = (event) => {
-        setPriceSelected(event.target.value);
-        setSelectedCarPrice(`To ${event.target.value} $`);
-      };
-    
-    
-    
       const handleMileageFromChange = (event) => {
         setMileageFrom(event.target.value);
       };
@@ -33,8 +19,9 @@ export const Filter = ({carPrice, carBrands}) => {
 
 const formSubmit = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget.cities.value)
-
+    const Brands = e.currentTarget.carBrands.value;
+    const Price = e.currentTarget.carPriceInput.value;
+    filterCards(Brands, Price, mileageFrom, mileageTo);
 }
 
   return (
